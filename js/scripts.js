@@ -60,10 +60,8 @@ const updateTodo = (text) => {
 
 // Eventos
 
-/*
 var data = new Date()
 var hora = data.getHours()
-var body = document.querySelector('body')
 
 if (hora < 6) {
     body.style.background = 'url("../img/foto-noite.jpg")'
@@ -74,7 +72,6 @@ if (hora < 6) {
 } else if (hora < 23) {
     body.style.background = 'url("../img/foto-noite.jpg")'
 }
-*/
 
 
 todoForm.addEventListener("submit", (e) => {
