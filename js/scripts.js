@@ -8,6 +8,20 @@ const cancelEditBtn = document.querySelector('#cancel-edit-btn')
 
 let oldInputValue
 
+var data = new Date()
+var hora = data.getHours()
+var body = document.querySelector('body')
+
+if (hora < 6) {
+    body.style.background = 'url("../img/foto-noite.jpg")'
+} else if(hora < 12) {
+    body.style.background = 'url("../img/foto-manha.jpg")'
+} else if (hora < 18) {
+    body.style.background = 'url("../img/foto-tarde.jpg")'
+} else if (hora < 23) {
+    body.style.background = 'url("../img/foto-noite.jpg")'
+}
+
 // Funções
 const saveTodo = (text) => {
 
@@ -59,21 +73,6 @@ const updateTodo = (text) => {
 }
 
 // Eventos
-var data = new Date()
-var hora = data.getHours()
-var body = document.querySelector('body')
-
-if (hora < 6) {
-    body.style.background = 'url("../img/foto-noite.jpg")'
-} else if(hora < 12) {
-    body.style.background = 'url("../img/foto-manha.jpg")'
-} else if (hora < 18) {
-    body.style.background = 'url("../img/foto-tarde.jpg")'
-} else if (hora < 23) {
-    body.style.background = 'url("../img/foto-noite.jpg")'
-}
-
-
 todoForm.addEventListener("submit", (e) => {
     e.preventDefault()
 
